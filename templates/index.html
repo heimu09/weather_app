@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Weather App</h1>
+    <form id="city-form">
+      <input type="text" id="city-input" name="city" placeholder="Enter city" autocomplete="off" required>
+      <div id="suggestions" class="suggestions"></div>
+      <button type="submit">Get Weather</button>
+    </form>
+    <div id="weather-result"></div>
+    <div id="last-city">
+      {% if last_city %}
+        <p>Last searched city: {{ last_city }}</p>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>
